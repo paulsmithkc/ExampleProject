@@ -1,5 +1,4 @@
-# Example Project
-Example express application with:
+## Example express application with:
 1. dotenv
 2. debug
 3. express
@@ -7,7 +6,7 @@ Example express application with:
 5. jQuery and Bootstrap included as static files
 6. simplified contact form
 
-Accompanying videos:
-https://youtu.be/wXU0mYVBMi0
-https://youtu.be/MEDpP0I2hN8
-https://youtu.be/7_TQh2HI7L4
+## Accompanying videos:
+1. https://youtu.be/wXU0mYVBMi0
+2. https://youtu.be/MEDpP0I2hN8
+3. https://youtu.be/7_TQh2HI7L4
