@@ -14,6 +14,9 @@ app.set('view engine', 'handlebars');
 
 // routes
 app.get('/', (req, res) => res.render('home', { title: 'Home Page' }));
+app.get('/contact', (req, res) => res.render('contact', { title: 'Contact Form' }));
+
+// static files
 app.use(express.static('public'));
 
 // start app
