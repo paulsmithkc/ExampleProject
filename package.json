@@ -7,6 +7,14 @@
     "start": "node server.js",
     "nodemon": "nodemon server.js"
   },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "engines": {
+    "node": "12.16.3"
+  },
   "author": "Paul Smith",
   "license": "MIT",
   "dependencies": {
