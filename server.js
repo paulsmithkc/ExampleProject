@@ -9,14 +9,23 @@ const hbs = require('express-handlebars');
 
 // create and configure application
 const app = express();
-app.engine('handlebars', hbs());
+app.engine(
+  'handlebars',
+  hbs({
+    helpers: {
+      eq: (a, b) => a == b,
+    },
+  })
+);
 app.set('view engine', 'handlebars');
 app.use(express.urlencoded({ extended: false }));
 
 // routes
-app.get('/', (req, res) => res.render('home', { title: 'Home Page' }));
+app.get('/', (req, res) =>
+  res.render('home', { title: 'Home Page', active: 'home' })
+);
 app.get('/contact', (req, res) =>
-  res.render('contact', { title: 'Contact Form' })
+  res.render('contact', { title: 'Contact Form', active: 'contact' })
 );
 
 app.post('/contact', (req, res) => {
