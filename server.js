@@ -19,6 +19,7 @@ app.engine(
 );
 app.set('view engine', 'handlebars');
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // routes
 app.get('/', (req, res) =>
@@ -52,7 +53,11 @@ app.post('/contact', (req, res) => {
   }
 
   data.result = data.isValid ? 'Message Sent!' : 'Please fix the errors above!';
-  res.render('contact', data);
+  if (req.accepts('json')) {
+    res.json(data);
+  } else {
+    res.render('contact', data);
+  }
 });
 
 // static files
