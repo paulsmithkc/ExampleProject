@@ -53,10 +53,10 @@ app.post('/contact', (req, res) => {
   }
 
   data.result = data.isValid ? 'Message Sent!' : 'Please fix the errors above!';
-  if (req.accepts('json')) {
-    res.json(data);
-  } else {
+  if (req.accepts('html')) {
     res.render('contact', data);
+  } else {
+    res.json(data);
   }
 });
 

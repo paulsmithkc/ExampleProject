@@ -8,6 +8,9 @@ $(() => {
       url: '/contact',
       dataType: 'json',
       data: formData,
+      headers: {
+        accept: 'application/json'
+      }
     })
       .done((res) => {
         $('#name + .text-danger').html(res.nameError || '');
